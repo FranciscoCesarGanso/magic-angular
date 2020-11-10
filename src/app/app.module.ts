@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { ErrorComponent } from './error/error.component';
 import {CardviewComponent} from './cardview/cardview.component';
+import {GameManagerComponent} from './gamemanager/gamemanager.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import {CardviewComponent} from './cardview/cardview.component';
     HomeComponent,
     ContactanosComponent,
     ErrorComponent,
-    CardviewComponent
+    CardviewComponent,
+	GameManagerComponent
   ],
   imports: [
     BrowserModule,
      FormsModule,
     HttpClientModule,
-    routing
+    routing,
+	RouterModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
