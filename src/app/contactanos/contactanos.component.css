@@ -1,0 +1,55 @@
+
+
+h2{
+	margin-top: 20px;
+	text-align: center;
+}
+h4{
+	color:#ba4a4b; 
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#lista_contacto ul{
+	
+	list-style: none;
+}
+#lista_contacto li{
+
+	display: block;
+	padding: 10px;
+}
+#lista_contacto div{
+	display:table-cell;
+	vertical-align:middle;
+
+}
+#lista_contacto img{
+	border-radius: 50%;
+	padding: 2%;
+	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+	height:60%;
+	width: 60%;
+}
+.info_div div{
+	padding: 10px;
+}	
+.team_descriptor:before{
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+    background-color: #82AEC5;
+}
+.team_descriptor:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+    background-color: #82AEC5;
+}

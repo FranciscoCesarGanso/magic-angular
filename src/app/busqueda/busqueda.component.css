@@ -1,0 +1,58 @@
+#div_busqueda{
+	display:inline;
+	text-align: center;
+}
+#busqueda{
+	display: block;
+  margin-right: auto;
+  margin-left: auto;
+  height:20px;
+  width: 500px; 
+}
+#lista_cartas{
+	padding: 5px;
+	list-style: none;
+}
+#lista_cartas li{
+	margin-top:5px ;
+	margin-bottom:5px;
+}
+#lista_cartas li:after {
+    width: 100%;
+    border: 1px solid gray;
+    width: 220px;
+    
+}
+.button{
+
+}
+#paginas{
+	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+  	align-items: center;
+  	padding: 5px;
+}
+.paginas_inside{
+	margin:5px;
+}
+@media screen {
+	div#preloader {
+		position: absolute;
+		left: -9999px;
+		top:  -9999px;
+		}
+	div#preloader img {
+		display: block;
+		}
+	}
+@media print {
+	div#preloader, 
+	div#preloader img {
+		visibility: hidden;
+		display: none;
+		}
+	}
+#hoverimage{
+	position: absolute;
+}	

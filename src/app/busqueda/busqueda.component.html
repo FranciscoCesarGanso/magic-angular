@@ -1,0 +1,32 @@
+<div id="div_busqueda">
+	<ng-container *ngIf="carta_select; then carta_view; else busqueda_carta">
+	</ng-container>
+	<ng-template #carta_view>
+		<app-cardview [card]="carta_select"></app-cardview>
+		<button class="button" (click)="volver()">Volver</button>
+	</ng-template>
+	<ng-template #busqueda_carta>	
+		<input type="text" name="busqueda" id="busqueda" (keyup.enter)="buscarCarta()" placeholder="Realizar busqueda por nombre" [(ngModel)]="busqueda"><br/>
+		<hr>
+		<ng-container *ngIf="cartas; then resultado_busqueda; else resultado_fallido">
+		</ng-container>
+		<ng-template #resultado_busqueda>
+			<ul id="lista_cartas">
+				<li *ngFor="let card of cartas.slice(getFirst(),getLast())" (mouseover)="over(card.multiverseid)" (mouseout)="out()"> {{card.name}} <button class="button" (click)="getCarta(card) ">Detalles</button></li>
+			</ul>
+			<div id="preloader">
+				<img *ngFor="let card of cartas.slice(getFirst(),getLast())" src="https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid={{card.multiverseid}}&type=card" width="1" height="1"> 
+			</div>	
+			<div id="paginas">
+				<button class="paginas_inside" [disabled]="paginaActual==0" (click)="paginaAtras()">Atras</button>
+				<span class="paginas_inside">{{paginaActual}}</span>
+				<button class="paginas_inside" [disabled]="paginaActual==paginaTotal"(click)="paginaAdelante()">Adelante</button>
+			</div>
+			<img id="hoverimage" [src]="imgHover">
+				
+		</ng-template>
+		<ng-template #resultado_fallido>
+			<p>NO hay nada</p>
+		</ng-template>
+	</ng-template>		
+</div>    
