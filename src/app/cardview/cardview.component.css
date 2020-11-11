@@ -1,0 +1,12 @@
+#contentdiv {
+	display: grid;
+	grid-template-columns: 230px auto;
+}
+
+#imgdiv {
+	grid-column: 1;
+}
+
+#datadiv {
+	grid-column:2;
+}
